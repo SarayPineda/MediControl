@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.InicioFragment"
+    android:background="@drawable/fondo">
+
+    //Imagen del encabezado
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/cajero" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="10dp"
+        android:text="INGRESO DE PRODUCTO"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    //Boton atras
+    <ImageButton
+        android:id="@+id/btnAtras"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:background="@color/Transparente"
+        app:srcCompat="@drawable/atras" />
+
+    <GridLayout
+        android:id="@+id/idGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titulo"
+        android:columnCount="2"
+        android:padding="4dp"
+        android:rowCount="3">>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDatosIngresos"
+            android:layout_width="350dp"
+            android:layout_height="430dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:foreground="?selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="430dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/codigoProducto"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:ems="10"
+                    android:hint="Código del producto"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="438dp" />
+
+                <ImageButton
+                    android:id="@+id/btnBuscar"
+                    android:layout_width="48dp"
+                    android:layout_height="52dp"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="-50dp"
+                    android:background="@color/Transparente"
+                    android:src="@drawable/lupa" />
+
+                <EditText
+                    android:id="@+id/descripcionProducto"
+                    android:layout_width="296dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Descripción del producto"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="438dp" />
+
+                <TextView
+                    android:id="@+id/presentacionProducto"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:text=" Presentación"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="87dp"
+                    tools:layout_editor_absoluteY="602dp" />
+
+                <TextView
+                    android:id="@+id/dosisProducto"
+                    android:layout_width="123dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="202dp"
+                    android:layout_marginTop="-28dp"
+                    android:text=" Dosis"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="87dp"
+                    tools:layout_editor_absoluteY="602dp" />
+
+                <EditText
+                    android:id="@+id/cantidadIngreso"
+                    android:layout_width="185dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Cantidad ingresada"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="87dp"
+                    tools:layout_editor_absoluteY="602dp" />
+
+                <ImageButton
+                    android:id="@+id/btnCalendario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/Transparente"
+                    android:src="@drawable/calendario" />
+
+                <TextView
+                    android:id="@+id/fechaIngreso"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="-38dp"
+                    android:layout_marginRight="88dp"
+                    android:text="Fecha de ingreso"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="85dp"
+                    tools:layout_editor_absoluteY="602dp" />
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#5BCF60"
+                    android:drawableRight="@drawable/guardar"
+                    android:text="GUARDAR   "
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</RelativeLayout>

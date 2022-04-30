@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.InicioFragment"
+    android:background="@drawable/fondo">
+
+    //Imagen del encabezado
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/medicina" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="10dp"
+        android:text="REGISTRO DE PRODUCTO"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    //Boton atras
+    <ImageButton
+        android:id="@+id/btnAtras"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:background="@color/Transparente"
+        app:srcCompat="@drawable/atras" />
+
+    <GridLayout
+        android:id="@+id/idGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titulo"
+        android:columnCount="2"
+        android:padding="4dp"
+        android:rowCount="3">>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDatosRegistro"
+            android:layout_width="355dp"
+            android:layout_height="320dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:foreground="?selectableItemBackground"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/descripcionProducto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:ems="10"
+                    android:hint="Descripción del producto"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="438dp" />
+
+                <EditText
+                    android:id="@+id/presentacionProducto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Presentación"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="438dp" />
+
+                <EditText
+                    android:id="@+id/dosisProducto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Dosis"
+                    android:inputType="textPersonName"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="438dp" />
+
+                <Button
+                    android:id="@+id/btnActualizar"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:backgroundTint="#5BCF60"
+                    android:drawableRight="@drawable/guardar"
+                    android:text="GUARDAR   "
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </GridLayout>
+</RelativeLayout>
